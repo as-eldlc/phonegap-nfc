@@ -495,6 +495,21 @@ var nfc = {
     // iOS only
     invalidateSession: function (win, fail) {
         cordova.exec(win, fail, "NfcPlugin", "invalidateSession", []);
+    },
+
+    // ISO-DEP // Android only
+    transceive: function (message, win, fail) {
+        cordova.exec(win, fail, "NfcPlugin", "transceive", [message]);
+    },
+
+    // ISO-DEP // Android only
+    connect: function (ndefMessage, win, fail) {
+        cordova.exec(win, fail, "NfcPlugin", "connect", []);
+    },
+
+    // ISO-DEP // Android only
+    close: function (ndefMessage, win, fail) {
+        cordova.exec(win, fail, "NfcPlugin", "close", []);
     }
 
 };

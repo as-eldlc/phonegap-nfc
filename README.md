@@ -8,6 +8,7 @@ Use to
 * write data to NFC tags
 * send data to other NFC enabled devices
 * receive data from NFC devices
+* write data to ISO-DEP (ISO 14443-4) compatible devices
 
 This plugin uses NDEF (NFC Data Exchange Format) for maximum compatibilty between NFC devices, tag types, and operating systems.
 
@@ -41,17 +42,17 @@ Supported Platforms
 
 ### Cordova
 
-    $ cordova plugin add phonegap-nfc
+    $ cordova plugin add phonegap-nfc-isodep
 
 ### PhoneGap
 
-    $ phonegap plugin add phonegap-nfc
+    $ phonegap plugin add phonegap-nfc-isodep
 
 ### PhoneGap Build
 
 Edit config.xml to install the plugin for [PhoneGap Build](http://build.phonegap.com).
 
-    <gap:plugin name="phonegap-nfc" source="npm" />
+    <gap:plugin name="phonegap-nfc-isodep" source="npm" />
 
 
 Windows Phone 8.1 should use the **windows** platform. The Silverlight based Windows Phone 8 code is no longer being maintained.
@@ -94,6 +95,12 @@ The initial iOS version plugin does not support scanning multiple tags (invalida
 - [nfc.showSettings](#nfcshowsettings)
 - [nfc.beginSession](#nfcbeginsession)
 - [nfc.invalidateSession](#nfcinvalidatesession)
+
+## ISO-DEP methods
+- [nfc.connect](#nfcconnect)
+- [nfc.is_connected](#nfcis_connected)
+- [nfc.transceive](#nfctransceive)
+- [nfc.close](#nfcclose)
 
 ## nfc.addNdefListener
 
@@ -572,6 +579,84 @@ Function `invalidateSession` stops the [NFCNDEFReaderSession](https://developer.
 ### Supported Platforms
 
 - iOS
+
+
+## nfc.connect (ISO-DEP function)
+
+Connect to the ISO-DEP TAG.
+
+    nfc.connect(success, failure);
+
+### Description
+
+Function `connect`. Enable I/O operations to the tag from this TagTechnology object.
+Only one TagTechnology object can be connected to a Tag at a time.
+https://developer.android.com/reference/android/nfc/tech/IsoDep.html#connect()
+
+### Parameters
+
+- __success__: Success callback function called when the TAG is connected
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+### Quick Example
+
+    nfc.connect();
+
+### Supported Platforms
+
+- android
+
+
+## nfc.transceive (ISO-DEP function)
+
+Send raw ISO-DEP data to the tag and receive the response.
+
+
+    nfc.transceive(message, success, failure);
+
+### Description
+
+Function `transceive`. Send raw ISO-DEP data to the tag and receive the response.
+Applications must only send the INF payload, and not the start of frame and end of frame indicators.
+Applications do not need to fragment the payload, it will be automatically fragmented and defragmented.
+https://developer.android.com/reference/android/nfc/tech/IsoDep.html#transceive(byte[])
+
+### Parameters
+
+- __success__: Success callback function called when the data has been sent and response gathered.
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+### Quick Example
+
+    nfc.transceive();
+
+### Supported Platforms
+
+- android
+
+## nfc.close (ISO-DEP function)
+
+Close ISO-DEP connection.
+
+    nfc.close(success, failure);
+
+### Description
+
+Function `close`. Disable I/O operations to the tag from this TagTechnology object, and release resources.
+https://developer.android.com/reference/android/nfc/tech/IsoDep.html#close()
+
+### Parameters
+
+- __success__: Success callback function called when the data has been sent and response gathered.
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+### Quick Example
+
+    nfc.transceive();
+
+### Supported Platforms
+
+- android
 
 
 # NDEF

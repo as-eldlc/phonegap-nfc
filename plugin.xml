@@ -2,17 +2,17 @@
 <plugin
     xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="phonegap-nfc"
+    id="phonegap-nfc-isodep"
     version="0.7.1">
 
     <name>NFC</name>
 
-    <description>Near Field Communication (NFC) Plugin. Read and write NDEF messages to NFC tags and share NDEF messages with peers.</description>
+    <description>Near Field Communication (NFC) Plugin. Read and write NDEF messages to NFC tags and share NDEF messages with peers. ISO-DEP ready on android.</description>
 
     <license>MIT</license>
     <keywords>nfc, NFC, NDEF</keywords>
-    <repo>https://github.com/chariotsolutions/phonegap-nfc.git</repo>
-    <issue>https://github.com/chariotsolutions/phonegap-nfc/issues</issue>
+    <repo>https://github.com/as-eldlc/phonegap-nfc-isodep.git</repo>
+    <issue>https://github.com/as-eldlc/phonegap-nfc-isodep/issues</issue>
 
     <platform name="android">
         <js-module src="www/phonegap-nfc.js" name="NFC">

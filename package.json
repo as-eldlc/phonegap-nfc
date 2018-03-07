@@ -1,9 +1,9 @@
 {
-  "name": "phonegap-nfc",
-  "version": "0.7.1",
+  "name": "phonegap-nfc-isodep",
+  "version": "0.7.2",
   "description": "Near Field Communication (NFC) Plugin. Read and write NDEF messages to NFC tags and share NDEF messages with peers.",
   "cordova": {
-    "id": "phonegap-nfc",
+    "id": "phonegap-nfc-isodep",
     "platforms": [
       "android",
       "wp8",
@@ -14,11 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chariotsolutions/phonegap-nfc.git"
+    "url": "git+https://github.com/as-eldlc/phonegap-nfc-isodep"
   },
   "keywords": [
     "nfc",
     "ndef",
+    "isodep",
     "ecosystem:cordova",
     "cordova",
     "cordova-android",
@@ -30,7 +31,7 @@
   "author": "Don Coleman <don.coleman@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chariotsolutions/phonegap-nfc/issues"
+    "url": "https://github.com/as-eldlc/phonegap-nfc-isodep/issues"
   },
-  "homepage": "https://github.com/chariotsolutions/phonegap-nfc#readme"
+  "homepage": "https://github.com/as-eldlc/phonegap-nfc-isodep#readme"
 }

@@ -5,7 +5,7 @@
     id="phonegap-nfc-isodep"
     version="0.7.1">
 
-    <name>NFC</name>
+    <name>NFC ISODEP</name>
 
     <description>Near Field Communication (NFC) Plugin. Read and write NDEF messages to NFC tags and share NDEF messages with peers. ISO-DEP ready on android.</description>
 

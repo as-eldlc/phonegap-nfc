@@ -580,6 +580,9 @@ Function `invalidateSession` stops the [NFCNDEFReaderSession](https://developer.
 
 - iOS
 
+# ISO-DEP functions
+
+Implementation forked from https://github.com/jalbersol/phonegap-nfc
 
 ## nfc.connect (ISO-DEP function)
 
